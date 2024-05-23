@@ -20,6 +20,12 @@ app.use("/api/movie", movieRoute);
 app.use('/api/theatre', theatreRoute);
 app.use('/api/bookings', bookingRoute);
 
-app.listen(8082, () => {
-  console.log('Server is running on http://localhost:8082');
-});
+const PORT = process.env.PORT || 8081
+
+app.listen(PORT, ()=> {
+  console.log("Server is running");
+})
+
+// app.listen(8082, () => {
+//   console.log('Server is running on http://localhost:8082');
+// });
